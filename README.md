@@ -12,7 +12,25 @@ This project analyzes 911 emergency calls from Montgomery County, PA. The notebo
 - **Source:** Montgomery County, PA 911 calls dataset
 - **Columns:** `lat`, `lng`, `desc`, `zip`, `title`, `timeStamp`, `twp`, `addr`, `e`
 - **Note:** Dataset is **not included** due to file size. To run the notebook, place your `911.csv` in the same directory or update the file path in the notebook.
+ Challenges Encountered
 
+Missing township values: Filled with "Unknown" to retain data.
+
+Inconsistent call titles: Standardized call types for analysis.
+
+Class imbalance: Fire calls were underrepresented, reducing predictive performance.
+
+Feature limitations: Only location and time features were available; adding more features could improve predictions.
+
+Key Insights
+
+EMS calls are most frequent, peaking in mornings and afternoons.
+
+Fire calls are rare, with seasonal spikes in summer months.
+
+Traffic calls are concentrated in specific townships.
+
+Peak call hours differ by emergency type, highlighting resource allocation needs.
 ## Notebook Contents
 1. **Data Loading and Cleaning**  
    - Handle missing values and drop unnecessary columns.
