@@ -12,25 +12,45 @@ This project analyzes 911 emergency calls from Montgomery County, PA. The notebo
 - **Source:** Montgomery County, PA 911 calls dataset
 - **Columns:** `lat`, `lng`, `desc`, `zip`, `title`, `timeStamp`, `twp`, `addr`, `e`
 - **Note:** Dataset is **not included** due to file size. To run the notebook, place your `911.csv` in the same directory or update the file path in the notebook.
- Challenges Encountered
+## Challenges Encountered
 
-Missing township values: Filled with "Unknown" to retain data.
+### Missing Township Values
+- Some rows had missing `twp` (township) data.  
+- **Solution:** Filled missing values with `"Unknown"` to retain all data for analysis.
 
-Inconsistent call titles: Standardized call types for analysis.
+### Inconsistent Call Titles
+- Call titles had varying formats (e.g., `EMS: BACK PAINS/INJURY`, `Fire: ALARM`).  
+- **Solution:** Standardized emergency call types into three main classes: **EMS**, **Fire**, **Traffic**.
 
-Class imbalance: Fire calls were underrepresented, reducing predictive performance.
+### Class Imbalance
+- **Fire calls** were significantly fewer than EMS or Traffic calls.  
+- **Impact:** Lower predictive performance for Fire in the classification model.  
+- **Future Improvement:** Oversampling techniques or additional features could improve balance.
 
-Feature limitations: Only location and time features were available; adding more features could improve predictions.
+### Feature Limitations
+- Only time (`Hour`, `Month`, `DayOfWeek`) and location (`twp`, `addr`) features were available.  
+- **Impact:** Limited information for modeling; predictive performance could improve with richer features.
 
-Key Insights
+---
 
-EMS calls are most frequent, peaking in mornings and afternoons.
+## Key Insights
 
-Fire calls are rare, with seasonal spikes in summer months.
+### EMS Calls
+- Most frequent type of emergency call.  
+- **Peak Times:** Morning and afternoon hours.  
 
-Traffic calls are concentrated in specific townships.
+### Fire Calls
+- Rare compared to other call types.  
+- Exhibit **seasonal spikes**, especially during summer months.  
 
-Peak call hours differ by emergency type, highlighting resource allocation needs.
+### Traffic Calls
+- Concentrated in **specific high-traffic townships**.  
+- Patterns can help identify hotspots for traffic management.
+
+### Peak Call Hours
+- Vary by emergency type.  
+- **Insight:** Helps in **resource allocation and planning** for emergency services.
+
 ## Notebook Contents
 1. **Data Loading and Cleaning**  
    - Handle missing values and drop unnecessary columns.
