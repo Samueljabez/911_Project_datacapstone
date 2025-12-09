@@ -64,9 +64,3 @@ This project analyzes 911 emergency calls from Montgomery County, PA. The notebo
 4. **Machine Learning Model**  
    - Train a Random Forest classifier to predict emergency type.
    - Evaluate performance using precision, recall, and f1-score.
-
-## How to Run
-1. Clone or download this repository.
-2. Install required libraries:
-```bash
-pip install pandas matplotlib seaborn scikit-learn make it lke this
