@@ -73,4 +73,4 @@ This project demonstrates an **intermediate-level data science workflow** on rea
 - **Predictive Modeling:** Built a multi-class classification model to predict emergency type, highlighting challenges such as class imbalance and limited features.  
 - **Practical Application:** Insights can help emergency services with **resource allocation, planning, and prioritization**.  
 
-Overall, this project showcases the ability to handle messy real-world data, extract actionable insights, and apply machine learning — forming a solid foundation for more advanced projects like **Recommender Systems** or **Generative AI**.
+Overall, this project showcases the ability to handle messy real-world data, extract actionable insights, and apply machine learning — forming a solid foundation for more advanced projects like **Recommender Systems** or **Generative AI** which i wll be working on next **THANK YOU**
